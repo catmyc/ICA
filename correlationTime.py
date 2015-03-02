@@ -232,6 +232,12 @@ corrT.writeAllProjectedTraj() # Very time consuming. Total running time estimate
 corrT.calcAllAutocorr_from_file()
 
 '''
+# An example of using the ProjectedTraj.dat alone.
+corrT  = correlationTimeCalculator() # Creating an empty object
+corrT.calcAllAutocorr_from_file() # Call this function, using all the default parameters defined.
+'''
+
+'''
 #------ Debug ----------
 #Debug requirements:
 #Run the formal codes above for a while, then interrupt it with Ctrl+C.
