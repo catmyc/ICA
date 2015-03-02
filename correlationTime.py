@@ -1,6 +1,6 @@
 '''
-For the calculation of the correlation time of the trajectory projected onto specified direction (An independent component or \
-a principle component).
+For the calculation of the correlation time of the trajectory projected onto 
+specified direction (An independent component or a principle component).
 '''
 __Author__ = "Yuncheng Mao"
 __Email__ = '''catmyc@gmail.com; maoyuncheng@mail.nankai.edu.cn'''
