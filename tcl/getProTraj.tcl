@@ -5,6 +5,8 @@ set ifWrittenPSF 0
 set pieceCount 0
 set pro {}
 
+package require pbctools
+
 proc init { psffile } {
 	mol new $psffile
 }
@@ -12,6 +14,10 @@ proc init { psffile } {
 proc protrajCore { dcdfile interval } {
 	set start [expr $interval - 1]
 	animate read dcd $dcdfile beg $start skip $interval waitfor all
+	puts "Wrapping trajectory according to the PBC conditions. Wrapped system will be centered on the protein..."
+	#--------- CUSTOMIZE THE NEXT COMMAND!!!! -------------------
+	pbc wrap -all -sel all -center com -centersel "segid PROA" -compound res -shiftcenter {0 0 0}
+	#------------------------------------------------------------
 	global ifWrittenPSF
 	global pro
 	global pieceCount	
