@@ -75,7 +75,7 @@ def vecvar2(vec):
     mean squar variance
     '''
     v = vec_centralized(vec)
-    return vecdot(v, v) / len(v)
+    return vecdot(v, v) / (len(v) -1)
 
 def vecvar(vec):
     return math.sqrt(vecvar2(vec))
